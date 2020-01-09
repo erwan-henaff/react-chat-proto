@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: green;
+
+  background-image: url("./asset/Simon_Stalenhag_Concept_Illustration_42.png");
+  background-size: cover;
+  height:100%;
 }
 
 code {

@@ -1,0 +1,167 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  height:100vh;
+  
+}
+.main {
+  background-color: #352C46;
+  width:600px;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.list {
+  flex-grow:1;
+  display:flex;
+  flex-direction:column-reverse;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.comment {
+    display:flex;
+    box-sizing: border-box;
+    min-height:35px;
+    margin:1px;
+
+}
+.commentText {
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  word-wrap: break-word;  
+
+  padding: 5px 5px 0 5px;
+  min-width: 50px;
+}
+.commentImg {
+  height:35px;
+  width:35px;
+}
+.commentImg img {
+  height:35px;
+  width:35px;
+  object-fit: scale-down;
+  border-radius:50%;
+
+}
+.commentTime {
+  color: white;
+  height:35px;
+  display: flex;  
+  align-items: flex-end;
+}
+
+.classdistinction0 {
+  flex-direction:row;
+}
+.classdistinction0 .commentText{
+  background-color:#9573BC;
+}
+
+.classdistinction1 {
+  flex-direction:row-reverse;
+}
+.classdistinction1 .commentText{
+  background-color:#222222;
+}
+
+
+
+.form {
+  border: none;
+  width:100%;
+  background-color: #282833;
+  color:white;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  background-color: #222222;
+  color: #9573BC;
+  width: 100px;
+  border-radius: 20px;
+}
+.label_form {
+  object-fit: border-box;
+  border: none;
+  width: 80%;
+  outline: none;
+
+    
+
+}
+.text_field {
+  object-fit: border-box;
+  border: none;
+  outline: none;
+  background-color: #222222;
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 0 10px;
+  width: 95%;
+  height: 35px;
+}
+
+label .btn {
+  display: block;
+  background-color: #222222;
+  color: #9573BC;
+  height: 30px;
+  border-radius: 20px;
+  height: 35px;
+
+}
+.btn_submit {
+  width: 20%;
+  color:#9573BC;
+  border: none;
+  outline: none;
+}
+
+.btn input {
+  display:none;
+}
+.btn div {
+  height: 30px;
+  object-fit: border-box;
+  padding-top: 10px;
+}
+
+.btn input:checked + div {
+  color: #282833;
+  background-color: #9573BC;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
