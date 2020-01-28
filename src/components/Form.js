@@ -46,7 +46,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form className="form" onSubmit={this.handleSubmit}>
+      <form className="form" onSubmit={this.handleSubmit} autocomplete="off">
         <label className="label_form">
           <input
             type="text"
