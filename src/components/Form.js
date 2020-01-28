@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { addComment } from '../actions';
+import { connect } from 'react-redux';
+
 class Form extends React.Component {
   constructor (props) {
     super(props);
@@ -36,9 +39,13 @@ class Form extends React.Component {
   };
 
   handleSubmit(event) {
-    console.log('Ready to send: ' + this.state);
     event.preventDefault();
-    this.props.addNewLine(this.state.value, this.state.user)
+    this.props.addComment(
+      { 
+        user: this.state.user,
+        text: this.state.value
+      }
+      )
     this.setState({ value: '' });
   }
 
@@ -86,4 +93,10 @@ class Form extends React.Component {
   
 }
 
-export default Form;
+const mapStateToProps = state => {
+  return state;
+};
+
+export default connect(mapStateToProps, { addComment })(Form);
+
+// export default Form;

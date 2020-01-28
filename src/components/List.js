@@ -1,8 +1,12 @@
 import React from 'react';
-import Comment from './Comment'
+import Comment from './Comment';
+import { connect } from 'react-redux';
+
 
 function List(props) {
-    const data = props.list;
+    const data = props.comments;
+    console.log("aaaaaa____________________________-");
+    console.log(data);
     const comments = data.map(el => {
         return (
             <Comment 
@@ -20,48 +24,9 @@ function List(props) {
   );
 }
 
-export default List;
+const mapStateToProps = state => {
+  return state;
+};
 
-// class List extends React.Component {
-//     constructor () {
-//         super();
-//         this.state = {
-//             data:"",
-//         };
-//     }
-    
+export default connect(mapStateToProps)(List);
 
-//     render () {
-//                 const data = this.props.list;
-
-//                 const comments = data.map(el => {
-//                     return (
-//                         <Comment 
-//                             key={el.id}
-//                             text={el.text}
-//                             user={el.user}
-//                         ></Comment>
-//                         // <ToDoItem
-//                         //   key={el.id}
-//                         //   data={el}
-//                         //   handleUpdate={this.updateItem}
-//                         // ></ToDoItem>
-//                     );
-//                 });
-
-//         return (
-//             <div className="list">
-//                 {comments}
-
-//                 {/* <Comment></Comment>
-//                 <Comment></Comment>
-//                 <Comment></Comment>
-//                 <Comment></Comment>
-//                 <Comment></Comment>
-//                 <Comment></Comment>
-//                 <Comment></Comment> */}
-//             </div>
-//         );
-//     }
-  
-// }

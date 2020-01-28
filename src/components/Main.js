@@ -37,7 +37,7 @@ class Main extends React.Component {
     render () {
         return (
             <div className="main">
-                <List list={this.state.comments}></List>
+                <List></List>
                 <Form addNewLine={this.handleAddNewLine}></Form>
             </div>
         );
